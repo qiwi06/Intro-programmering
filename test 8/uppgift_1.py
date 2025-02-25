@@ -1,0 +1,12 @@
+a=[2,3,2,4,1]
+a.remove(3)
+a.insert(1,5)
+print(a)
+a.remove(1)
+a.insert(4,6)
+print(a)
+a.append(4)
+medel=sum(a)/len(a)
+print("medel:", medel)
+a.sort()
+print("sorterad:",a)

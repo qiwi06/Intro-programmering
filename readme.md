@@ -9,6 +9,8 @@ Alice Olsson Loggbok
 5.	Spelaren säger ja eller nej
 6.	Vinst eller inte vinst
 
+## 25-02-25
+Idag har jag fortsatt med Rikards uppgifter. 
 ## 25-02-18
 Idag har jag gjort klart första uppgiften och sedan börjat på den andra
 ## 25-02-17

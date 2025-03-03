@@ -12,7 +12,7 @@ screen = pygame.display.set_mode(size)
  
 pygame.display.set_caption("The Snake Game")
 
-snake_image = pygame.image.load("img/snake.png")
+snake_image = pygame.image.load("py_game/img/snake.png")
 snake_x = 50
 snake_y = 300
 snake_last_direction = "right"
@@ -34,6 +34,13 @@ while is_running:
             snake_last_direction = "left"
         if snake_x < 0:
             snake_x = 400
+    if keys[pygame.K_RIGHT]:
+        snake_x +=5
+        if (snake_last_direction == "left"):
+            snake_image = pygame.transform.flip(snake_image, True, False)
+            snake_last_direction = "right"
+        if snake_x > 400:
+            snake_x=0
     screen.fill(GREEN)
  
     screen.blit(snake_image, [snake_x, snake_y])

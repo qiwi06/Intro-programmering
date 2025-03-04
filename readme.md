@@ -9,6 +9,10 @@ Alice Olsson Loggbok
 5.	Spelaren säger ja eller nej
 6.	Vinst eller inte vinst
 
+## 25-03-04
+Idag har Kenneth haft genomgång om vad man ska tänka på när man programmerar och så har jag jobbat med Rikards pygame projekt. 
+## 25-03-03
+Idag har jag löst klart snake game så att det fungerar som det ska. 
 ## 25-02-25
 Idag har jag fortsatt med Rikards uppgifter. 
 ## 25-02-18

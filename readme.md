@@ -9,6 +9,8 @@ Alice Olsson Loggbok
 5.	Spelaren säger ja eller nej
 6.	Vinst eller inte vinst
 
+## 25-03-10
+Jag har jobbat med ormen och att få in score till den. jag ska också försöka få in på skärmen att den säger yum i en pratbubbla så det ska jag jobba mer med imorgon. 
 ## 25-03-04
 Idag har Kenneth haft genomgång om vad man ska tänka på när man programmerar och så har jag jobbat med Rikards pygame projekt. 
 ## 25-03-03

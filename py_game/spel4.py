@@ -28,6 +28,12 @@ snake_radius = (snake_image.get_width() + snake_image.get_height()) / 4
 plum_image = pygame.image.load("py_game/img/plum.png")
 plums = []
 plum_radius = (plum_image.get_width() + plum_image.get_height()) / 4
+
+score=0
+font = pygame.font.Font(None,36)
+text = font.render('Score=0', True, BLACK, WHITE)
+textRect = text.get_rect()
+textRect.center = (50,15)
  
 clock = pygame.time.Clock()
  
@@ -66,14 +72,16 @@ while is_running:
         if collides(snake_x, snake_y, snake_radius, 
                     plum[0], plum[1], plum_radius):
             plums.remove(plum)
-            print("Yum!")
+            score=score+1
+            print("Yum!", score)
+            text = font.render("Score="+str(score), True, BLACK, WHITE)
         
     screen.fill(GREEN)
  
     screen.blit(snake_image, [snake_x, snake_y])
     for plum in plums:
         screen.blit(plum_image, [plum[0], plum[1]])
- 
+    screen.blit(text, textRect)
     pygame.display.flip()
  
     clock.tick(60)

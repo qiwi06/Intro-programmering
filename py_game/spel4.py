@@ -29,6 +29,10 @@ plum_image = pygame.image.load("py_game/img/plum.png")
 plums = []
 plum_radius = (plum_image.get_width() + plum_image.get_height()) / 4
 
+coin_image = pygame.image.load("py_game/img/coin.png")
+coin_x = 30
+coin_y = 400
+
 score=0
 font = pygame.font.Font(None,36)
 text = font.render('Score=0', True, BLACK, WHITE)
@@ -47,6 +51,7 @@ while is_running:
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         snake_x -= 5
+        coin_x -= 5
         if (snake_last_direction == "right"):
             snake_image = pygame.transform.flip(snake_image, True, False)
             snake_last_direction = "left"
@@ -54,6 +59,7 @@ while is_running:
             snake_x = 600
     if keys[pygame.K_RIGHT]:
         snake_x += 5
+        coin_x += 5
         if (snake_last_direction == "left"):
             snake_image = pygame.transform.flip(snake_image, True, False)
             snake_last_direction = "right"
@@ -79,6 +85,7 @@ while is_running:
     screen.fill(GREEN)
  
     screen.blit(snake_image, [snake_x, snake_y])
+    screen.blit(coin_image, [coin_x, coin_y])
     for plum in plums:
         screen.blit(plum_image, [plum[0], plum[1]])
     screen.blit(text, textRect)

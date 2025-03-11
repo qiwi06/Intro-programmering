@@ -9,6 +9,8 @@ Alice Olsson Loggbok
 5.	Spelaren säger ja eller nej
 6.	Vinst eller inte vinst
 
+## 25-03-11
+Idag har jag lagt in ett mynt som ska komma upp när man fångar ett plommon. Just nu har jag bara lagt in bilden och att den följer efter ormen men jag ska senare få att den bara kommer upp när man bara fångar ett plommon så att det blir som en poäng. Jag tyckter det var svårt att veta hur man ska få upp myntet bara när man fångar ett plommon men jag ska fortsätta med det nästa lektion. 
 ## 25-03-10
 Jag har jobbat med ormen och att få in score till den. jag ska också försöka få in på skärmen att den säger yum i en pratbubbla så det ska jag jobba mer med imorgon. 
 ## 25-03-04

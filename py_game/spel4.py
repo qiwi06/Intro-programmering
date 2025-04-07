@@ -29,9 +29,18 @@ plum_image = pygame.image.load("py_game/img/plum.png")
 plums = []
 plum_radius = (plum_image.get_width() + plum_image.get_height()) / 4
 
+cherries_image = pygame.image.load("py_game/img/cherries.png")
+cherrie = []
+cherries_radius = (cherries_image.get_width() + cherries_image.get_height()) / 4
+
+
 coin_image = pygame.image.load("py_game/img/coin.png")
-coin_x = 30
-coin_y = 400
+coin_image = pygame.transform.scale(coin_image,(50, 50))
+coin_x = snake_x
+coin_y =snake_y - 80
+coin_last_direction = "right"
+coin_radius = (coin_image.get_width() + coin_image.get_height()) / 4
+coin_time = 0
 
 score=0
 font = pygame.font.Font(None,36)
@@ -57,6 +66,11 @@ while is_running:
             snake_last_direction = "left"
         if snake_x < 0:
             snake_x = 600
+        if (coin_last_direction == "right"):
+            coin_image = pygame.transform.flip(coin_image, True, False)
+            coin_last_direction = "left"
+        if coin_x < 0:
+            coin_x = 600
     if keys[pygame.K_RIGHT]:
         snake_x += 5
         coin_x += 5
@@ -65,29 +79,54 @@ while is_running:
             snake_last_direction = "right"
         if snake_x > 600:
             snake_x = 0
+        if (coin_last_direction == "left"):
+            coin_image = pygame.transform.flip(coin_image, True, False)
+            coin_last_direction = "right"
+        if coin_x > 600:
+            coin_x = 0
 
     if (random.randint(0, 100) < 2):
         plum_x = random.randint(0, 600)
         plums.append([plum_x, 0, 0]) 
     
+    if (random.randint(0, 100) < 2):
+        cherries_x = random.randint(0, 600)
+        cherrie.append([cherries_x, 0, 0]) 
+
     for plum in plums:
         plum[1] += plum[2]
-        plum[2] += 0.2
+        plum[2] += 0.3
         if plum[1] > 800:
             plums.remove(plum)
         if collides(snake_x, snake_y, snake_radius, 
                     plum[0], plum[1], plum_radius):
             plums.remove(plum)
             score=score+1
+            coin_time = 20
             print("Yum!", score)
             text = font.render("Score="+str(score), True, BLACK, WHITE)
+    coin_time -= 1
+
+    for cherries in cherrie:
+        cherries[1] += cherries[2]
+        cherries[2] += 0.4
+        if cherries[1] > 800:
+            cherrie.remove(cherries)
+        if collides(snake_x, snake_y, snake_radius, 
+                    cherries[0], cherries[1], cherries_radius):
+            cherrie.remove(cherries)
+            print("Ouch")
+            is_running = False
         
     screen.fill(GREEN)
  
     screen.blit(snake_image, [snake_x, snake_y])
-    screen.blit(coin_image, [coin_x, coin_y])
+    if coin_time > 0:
+        screen.blit(coin_image, [coin_x, coin_y])
     for plum in plums:
         screen.blit(plum_image, [plum[0], plum[1]])
+    for cherries in cherrie:
+        screen.blit(cherries_image, [cherries[0], cherries[1]])
     screen.blit(text, textRect)
     pygame.display.flip()
  

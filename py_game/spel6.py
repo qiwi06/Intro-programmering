@@ -134,6 +134,12 @@ while is_running:
         score=score+1
         print("Kristaller fångade:", score)
     text = font.render("Score="+str(score), True, BLACK, WHITE)
+
+    # flytta monster
+    for monster in monsters:
+        # för varje monster gör ...
+        # gå nedåt, stopp vid vägg, sedan vänster eller höger
+        monster['y'] += monster['speed']
         
 
     # --- Screen-clearing code goes here

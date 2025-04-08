@@ -26,6 +26,9 @@ wall_image = pygame.image.load("py_game/img/brick_brown_0.png")
 player_image = pygame.image.load("py_game/img/deep_elf_knight_old.png")
 crystal_image = pygame.image.load("py_game/img/crystal_wall_lightmagenta.png")
 crystals = []
+# Lägga till monster
+monster_image = pygame.image.load("py_game/img/phoenix.png")
+monsters = []
 
 # Add visual elements to the game
 

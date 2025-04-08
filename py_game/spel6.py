@@ -65,6 +65,14 @@ while len(line) > 1:
         elif char == 'e':
             player['x'] = x
             player['y'] = y
+        elif char == 'm':
+            monsters.append ({
+                'x': x,
+                'y': y,
+                'image': monster_image,
+                'direction': random.choice([(1, 0), (-1, 0), (0, 1), (0, -1)]),
+                'speed': 3
+            })
         elif char == 'c':
             crystal = {}
             crystal['x'] = x
@@ -137,6 +145,9 @@ while is_running:
     for wall in walls:
         screen.blit(wall_image, (wall['x'], wall['y']))
     screen.blit(player_image, (player['x'], player['y']))
+    # Rita upp monster
+    for monster in monsters:
+        screen.blit(monster['image'], monster['x'], monster['y'])
     for crystal in crystals:
         screen.blit(crystal_image, (crystal['x'], crystal['y']))
     screen.blit(text, textRect)

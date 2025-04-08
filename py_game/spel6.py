@@ -147,7 +147,7 @@ while is_running:
     screen.blit(player_image, (player['x'], player['y']))
     # Rita upp monster
     for monster in monsters:
-        screen.blit(monster['image'], monster['x'], monster['y'])
+        screen.blit(monster_image, (monster['x'], monster['y']))
     for crystal in crystals:
         screen.blit(crystal_image, (crystal['x'], crystal['y']))
     screen.blit(text, textRect)

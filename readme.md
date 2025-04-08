@@ -1,5 +1,7 @@
 Alice Olsson Loggbok
 ========
+## 25-04-08
+Har lagt in monster som ska gå runt i labyrinten och att man dör om man krockar med den. Men just nu har jag bara lagt in monstret och fått den att gå nedåt men sen försvinner den ut ur skärmen. Det var lite svårt att veta hur man skulle få den att gå nedåt eller röra sig på skärmen eftersom jag bara lärt mig hur man flyttar en spelare med tangeneter. Men nästa lektion har jag tänkt att jag ska fortsätta att jobba med monstret och lära mig mer om hur något rör sig på skärmen automatiskt.
 ## 25-04-07
 Idag har jag gjort så man kan fånga kristallerna och så att score systemetfungerar. Jag trodde att man inte behövde blitta score texten så det fungerade inte till en början men tillslut fick jag det att fuyngera så att den syntes och räknade rätt. Jag fick också till det så att det räknas både i rutan men också nere i terminalen.
 ## 25-03-25

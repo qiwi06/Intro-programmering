@@ -1,5 +1,5 @@
 import pygame
-
+import random
 
 # --- Define helper functions
 def get_one_colliding_object(object_1, objects):

@@ -140,7 +140,8 @@ while is_running:
         # för varje monster gör ...
         # gå nedåt, stopp vid vägg, sedan vänster eller höger
         monster['y'] += monster['speed']
-        
+        if get_one_colliding_object(monster, walls):
+            monster['y'] -= monster['speed']
 
     # --- Screen-clearing code goes here
     # fill widh sand

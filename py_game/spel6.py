@@ -92,6 +92,10 @@ screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Maze Game")
 
+game_over = False
+text2 = font.render('Score=0', True, BLACK, WHITE)
+text2Rect = text2.get_rect()
+text2Rect.center = (50, 15)
 # --- Game time
 clock = pygame.time.Clock()
 # -------- Main Program Loop -----------
@@ -142,6 +146,17 @@ while is_running:
         monster['y'] += monster['speed']
         if get_one_colliding_object(monster, walls):
             monster['y'] -= monster['speed']
+            # ny riktning
+            monster['speed'] *= -1
+            
+    if get_one_colliding_object(player, monsters):
+        # game over
+        print("Game over!", game_over)
+        text2 = font.render("Game over"+str(game_over), True, BLACK, WHITE)
+        is_running = False
+
+
+
 
     # --- Screen-clearing code goes here
     # fill widh san
@@ -158,6 +173,7 @@ while is_running:
     for crystal in crystals:
         screen.blit(crystal_image, (crystal['x'], crystal['y']))
     screen.blit(text, textRect)
+    screen.blit(text2, text2Rect)
 
     
     pygame.display.update()  # or pygame.display.flip()

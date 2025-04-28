@@ -144,7 +144,7 @@ while is_running:
             monster['y'] -= monster['speed']
 
     # --- Screen-clearing code goes here
-    # fill widh sand
+    # fill widh san
     for y in range(0, size[1], wall_size):
         for x in range(0, size[0], wall_size):
             screen.blit(sand_image, (x, y))

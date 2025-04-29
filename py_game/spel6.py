@@ -91,8 +91,8 @@ size = (maze_width * wall_size, maze_height * wall_size)
 screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Maze Game")
-
 game_over = False
+
 text2 = font.render('Score=0', True, BLACK, WHITE)
 text2Rect = text2.get_rect()
 text2Rect.center = (50, 15)
@@ -151,7 +151,7 @@ while is_running:
             
     if get_one_colliding_object(player, monsters):
         # game over
-        print("Game over!", game_over)
+        print("Game over!")
         text2 = font.render("Game over"+str(game_over), True, BLACK, WHITE)
         is_running = False
 
@@ -173,7 +173,7 @@ while is_running:
     for crystal in crystals:
         screen.blit(crystal_image, (crystal['x'], crystal['y']))
     screen.blit(text, textRect)
-    screen.blit(text2, text2Rect)
+    
 
     
     pygame.display.update()  # or pygame.display.flip()

@@ -71,7 +71,7 @@ while len(line) > 1:
                 'y': y,
                 'image': monster_image,
                 'direction': random.choice([(1, 0), (-1, 0), (0, 1), (0, -1)]),
-                'speed': 3
+                'speed': 4
             })
         elif char == 'c':
             crystal = {}
@@ -143,16 +143,38 @@ while is_running:
     for monster in monsters:
         # för varje monster gör ...
         # gå nedåt, stopp vid vägg, sedan vänster eller höger
-        monster['y'] += monster['speed']
+        # NER
+        if monster['direction']==(0, 1):
+            #ner           
+            monster['y'] += monster['speed']
         if get_one_colliding_object(monster, walls):
             monster['y'] -= monster['speed']
             # ny riktning
-            monster['speed'] *= -1
+            monster['direction'] = random.choice([(1, 0), (-1, 0), (0, 1), (0, -1)])
+        # UPP
+        if monster['direction']==(0,-1):
+            monster['y'] -= monster['speed']
+        if get_one_colliding_object(monster, walls):
+            monster['y'] += monster['speed']
+            monster['direction'] = random.choice([(1, 0), (-1, 0), (0, 1), (0, -1)])
+        # Höger
+        if monster['direction']==(1,0):
+            monster['x'] += monster['speed']
+        if get_one_colliding_object(monster,walls):
+            monster['x'] -= monster['speed']
+            monster['direction'] = random.choice([(1, 0), (-1, 0), (0, 1), (0, -1)])
+        # Vänster
+        if monster['direction']==(-1,0):
+            monster['x'] -= monster['speed']
+        if get_one_colliding_object(monster,walls):
+            monster['x'] += monster['speed']
+            monster['direction'] = random.choice([(1, 0), (-1, 0), (0, 1), (0, -1)])
+
             
     if get_one_colliding_object(player, monsters):
         # game over
         print("Game over!")
-        text2 = font.render("Game over"+str(game_over), True, BLACK, WHITE)
+        text2 = font.render("Game over!", True, BLACK, WHITE)
         is_running = False
 
 

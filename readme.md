@@ -1,5 +1,7 @@
 Alice Olsson Loggbok
 ========
+## 25-05-06
+Idag har jag planerat mitt nya spel som ska vara ett yatzy. Sen har jag även börjat koda det. Jag började med att söka lite information om det för att få lite insperation. Sedan började jag skriva och få till en lista med slumpvis valda tärningar. Det var lite svårt att få det rätt men tillslut blev det så som jag ville. Nästa gång har jag tänkt att man ska kunna plocka ut de tärningar man vill behålla och sedan slå om. Jag vill också att man ännu senare ska kunna när man har slått klart alla tärningar att den ska skriva ut om man fått en kåk, par eller liknande. 
 ## 25-05-05
 Idag har jag lagt in monstrerna så att det kan röra sig fritt i labbyrinten. Det var lite svårt att få det att fungera men när jag trodde att allt var klart och det skulle funka så gjorde det inte det. Så då fick jag börja felsöka och såg sedan att det var att jag missat att tabba in två rader med kod så då fungerade det igen. Det var ett enkelt fel som var enkelt att lösa. Jag har också lagt in dörrar i img filen och så ska jag implementera de i spelet nästa lektion. 
 ## 25-04-25

@@ -1,5 +1,9 @@
 Alice Olsson Loggbok
 ========
+## 25-05-05
+Idag har jag lagt in monstrerna så att det kan röra sig fritt i labbyrinten. Det var lite svårt att få det att fungera men när jag trodde att allt var klart och det skulle funka så gjorde det inte det. Så då fick jag börja felsöka och såg sedan att det var att jag missat att tabba in två rader med kod så då fungerade det igen. Det var ett enkelt fel som var enkelt att lösa. Jag har också lagt in dörrar i img filen och så ska jag implementera de i spelet nästa lektion. 
+## 25-04-25
+Idag har jag fått monstret att inte försvinna ut ur bild men inte klurat ut än hur den rör sig upp och ned. Men nästa lektion ska jag fortsätta med hur man får monstret att röra sig per automatik. 
 ## 25-04-08
 Har lagt in monster som ska gå runt i labyrinten och att man dör om man krockar med den. Men just nu har jag bara lagt in monstret och fått den att gå nedåt men sen försvinner den ut ur skärmen. Det var lite svårt att veta hur man skulle få den att gå nedåt eller röra sig på skärmen eftersom jag bara lärt mig hur man flyttar en spelare med tangeneter. Men nästa lektion har jag tänkt att jag ska fortsätta att jobba med monstret och lära mig mer om hur något rör sig på skärmen automatiskt.
 ## 25-04-07
